@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
+
 import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
@@ -26,7 +28,6 @@ const HeroSection = () => {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "2em", display: "inline-block" }}
               repeat={Infinity}
             />
           </h1>
