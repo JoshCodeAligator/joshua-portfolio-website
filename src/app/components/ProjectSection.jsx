@@ -36,20 +36,13 @@ const projectsData = [
     description: "Project 1 description",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-  },
-  {
-    id: 6,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-  },
+  }
 ];
 
 const ProjectSection = () => {
   return (
     <>
-      <h2>My Projects</h2>
+      <h2 className="text-center text-4xl font-bold text-white mt-4">My Projects</h2>
       <div>
         {projectsData.map((project) => (
           <ProjectCard
