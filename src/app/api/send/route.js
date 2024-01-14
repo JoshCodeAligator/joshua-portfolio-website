@@ -1,11 +1,12 @@
 //import { EmailTemplate } from '../../../components/EmailTemplate';
 import { Resend } from "resend";
+import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.FROM_EMAIL
+const resend = new Resend("re_ZuVa9gko_E1AkCZ47eqZLvdtzSo8nJBGa");
+const fromEmail = "joshdebele8@gmail.com"
 
 export async function POST(req, res) {
-    const {body} = req;
+    const {body} = await req.json();
     const {email, subject, message} = body
   try {
     const data = await resend.emails.send({
@@ -22,8 +23,8 @@ export async function POST(req, res) {
       ),
     });
 
-    return Response.json(data);
+    return NextResponse.json(data);
   } catch (error) {
-    return Response.json({ error });
+    return NextResponse.json({ error });
   }
 }
