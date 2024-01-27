@@ -7,49 +7,77 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    title: "NextJS Portfolio Website",
+    description: "A portfolio website I designed to showcase my skillset in a variety of programming languages as well as applications I've developed and knowledge and experience I've gained through the years. I've used NextJS, React, and Tailwind CSS to create this.",
+    image: "/",
+    tag: ["All", "Full Stack"],
+    gitUrl: "https://github.com/JoshCodeAligator/joshua-portfolio-website",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    title: "BBQ Page",
+    description: "Built a front-end project with static HTML/CSS from scratch. Focused on developing and honing my skill in styling websites.",
+    image: "/images/projects/bbq-pic.png",
+    tag: ["All", "Full Stack"],
+    gitUrl: "https://github.com/JoshCodeAligator/BBQ-Page",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    title: "Finance Budget Tracker",
+    description: "Created a Finance Budgeting App from scratch using Vite.js, React, CSS",
+    image: "/images/projects/finance-budget-tracker.png",
+    tag: ["All", "Full Stack"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "React Portfolio Website",
+    title: "Wordle Game",
     description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/projects/wordle-pic.png",
+    tag: ["All", "Full Stack"],
+    gitUrl: "/https://github.com/JoshCodeAligator/joshua-debele-world",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Portfolio Website",
+    title: "TIES Resume Builder",
     description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    image: "/images/projects/ties-resume-builder.png",
+    tag: ["All", "Full Stack"],
+    gitUrl: "/",
+    previewUrl: "/",
+    
+
+  },{
+    id: 6,
+    title: "Ticketing App",
+    description: "Project 1 description",
+    image: "/images/projects/ticket-app.png",
+    tag: ["All", "Full Stack"],
     gitUrl: "/",
     previewUrl: "/",
   },
+  {
+    id: 7,
+    title: "Obituary Project",
+    description: "Project 1 description",
+    image: "/images/projects/obituary.png",
+    tag: ["All", "Full Stack"],
+    gitUrl: "/",
+    previewUrl: "/",
+  }, {
+    id: 8,
+    title: "Football Match Predictor",
+    description: "Project 1 description",
+    image: "/images/projects/football-match-predictor.png",
+    tag: ["All", "Machine Learning"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  
 ];
 
 const ProjectSection = () => {
@@ -82,13 +110,13 @@ const ProjectSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Full Stack"
+          isSelected={tag === "Full Stack"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Machine Learning"
+          isSelected={tag === "Machine Learning"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 mg:gap-12">
