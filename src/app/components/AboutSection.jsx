@@ -35,7 +35,7 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Javascript Data Structures and ALgorithms</li>
+        <li>Javascript Data Structures and Algorithms</li>
         <li>Responsive Web Design</li>
       </ul>
     ),

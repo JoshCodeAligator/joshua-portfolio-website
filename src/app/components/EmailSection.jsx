@@ -16,21 +16,32 @@ const EmailSection = () => {
       message: e.target.message.value,
     };
 
-    const JSONdata = JSON.stringify(data);
+    const JSONdata = JSON.stringify(data);2
     const endpoint = "/api/send";
 
     const options = {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-type': 'application/json',
+        "Content-type": "application/json",
       },
       body: JSONdata,
     };
 
     const response = await fetch(endpoint, options);
-    const resData = await response.json();
-    if (response.status === 200) {
-      setEmailSubmitted(true);
+
+    try {
+      // Try to parse the response as JSON
+      const resData = await response.json();
+
+      if (response.status === 200) {
+        setEmailSubmitted(true);
+      } else {
+        // Handle other response statuses if needed
+        console.error(`Error: ${response.status}`, resData);
+      }
+    } catch (error) {
+      // Handle JSON parsing error
+      console.error("Error parsing JSON:", error);
     }
   };
   return (
@@ -48,7 +59,10 @@ const EmailSection = () => {
           <Link href="https://github.com/JoshCodeAligator" target="_blank">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="https://www.linkedin.com/in/josh-debele-6a457a239/" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/josh-debele-6a457a239/"
+            target="_blank"
+          >
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
