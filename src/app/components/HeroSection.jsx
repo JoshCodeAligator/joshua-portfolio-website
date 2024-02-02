@@ -7,6 +7,22 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
+  const handleDownloadCV = () => {
+    const resumeUrl = 'Joshua_Debele.pdf';
+    
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Joshua_Debele_Resume.pdf';
+    link.click();
+  };
+
+  const handleHireMe = () => {
+    const email = 'joshdebele8@gmail.com';
+    
+    const mailToLink = `mailto:${email}`;
+
+    window.location.href = mailToLink;
+  };
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -41,10 +57,10 @@ const HeroSection = () => {
               Hi! I am a third year software engineering student seeking an internship.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-orange-500 via-yellow-500 to-orange-500 hover:bg-slate-200 text-white">
+            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-orange-500 via-yellow-500 to-orange-500 hover:bg-slate-200 text-white" onClick={handleHireMe}>
               Hire Me
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-orange-500 via-yellow-500 to-orange-500 hover:bg-slate-800 text-white mt-3">
+            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-orange-500 via-yellow-500 to-orange-500 hover:bg-slate-800 text-white mt-3" onClick={handleDownloadCV}>
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
