@@ -40,12 +40,14 @@ const HeroSection = () => {
             <TypeAnimation
               sequence={[
                 "Joshua Debele",
-                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                "Full Stack Developer",
-                1000,
+                1000, // wait 1s before changing
                 "Software Engineer",
                 1000,
-                "Avid Learner",
+                "Backend & Cloud Developer",
+                1000,
+                "Full-Stack Developer",
+                1000,
+                "Building Scalable Apps",
                 1000,
               ]}
               wrapper="span"
@@ -54,7 +56,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-              Hi! I am a third year software engineering student seeking an internship.
+              I'm a Software Engineering graduate who builds scalable apps and intuitive interfaces built to last, with a focus on backend, cloud, and full-stack development.
           </p>
           <div>
             <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-orange-500 via-yellow-500 to-orange-500 hover:bg-slate-200 text-white" onClick={handleHireMe}>
