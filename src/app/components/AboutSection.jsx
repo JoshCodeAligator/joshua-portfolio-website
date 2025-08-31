@@ -11,14 +11,14 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Python</li>
-        <li>Tailwind</li>
-        <li>NextJS</li>
-        <li>Javascript</li>
-        <li>React</li>
-        <li>MongoDB</li>
-        <li>Git</li>
-        <li>Java</li>
+        <li>PostgreSQL</li>
         <li>AWS</li>
+        <li>Docker & Kubernetes</li>
+        <li>CI/CD</li>
+        <li>React</li>
+        <li>Next.js</li>
+        <li>Javascript</li>
+        <li>Git</li>
       </ul>
     ),
   },
@@ -64,10 +64,7 @@ const AboutSection = () => {
           <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
             <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
             <p className="text-base lg:text-lg">
-              A Full Stack Developer with an interest in machine Learning. My
-              innate ability in software and desire to adapt and learn emerging
-              technologies makes me a useful asset when it comes to software
-              engineering.
+              Software Engineer passionate about backend, cloud, and AI - from SaaS apps to deep learning optimizers.
             </p>
             <div className="flex flex-row justify-start mt-8">
               <TabButton
