@@ -1,14 +1,14 @@
 "use client";
-import React, { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
     id: 1,
     title: "NextJS Portfolio Website",
-    description: "A portfolio website I designed to showcase my skillset in a variety of programming languages as well as applications I've developed and knowledge and experience I've gained through the years. I've used NextJS, React, and Tailwind CSS to create this. I also used an Resend API key for sending emails",
+    description: "Personal portfolio website built with NextJS and Tailwind CSS, featuring projects, skills, and contact integration. Includes an email system powered by Resend API.",
     image: "/images/projects/joshua-portfolio-website.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/JoshCodeAligator/joshua-portfolio-website",
@@ -16,33 +16,44 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "BBQ Page",
-    description: "Built a front-end project with static HTML/CSS from scratch. Focused on developing and honing my skill in styling websites.",
-    image: "/images/projects/bbq-pic.png",
+    title: "NextJS Portfolio Website",
+    description: "Personal portfolio website built with NextJS and Tailwind CSS, featuring projects, skills, and contact integration. Includes an email system powered by Resend API.",
+    image: "/images/projects/joshua-portfolio-website.png",
     tag: ["All", "Full Stack"],
-    gitUrl: "https://github.com/JoshCodeAligator/BBQ-Page",
-    previewUrl: "https://bbq-page.vercel.app/",
+    gitUrl: "https://github.com/JoshCodeAligator/joshua-portfolio-website",
+    previewUrl: "https://joshua-portfolio-website-nine.vercel.app/",
   },
   {
     id: 3,
-    title: "Finance Budget Tracker",
-    description: "Created a Finance Budgeting App from scratch using Vite.js, React, and CSS along with some articles to help with budgeting.",
-    image: "/images/projects/finance-budget-tracker.png",
+    title: "Capstone Mobile App",
+    description: "React Native app built with a team to connect students through shared updates, backed by APIs and PostgreSQL.",
+    image: "/images/projects/capstone.png", 
     tag: ["All", "Full Stack"],
-    gitUrl: "https://github.com/JoshCodeAligator/Finance-budget-tracker",
-    previewUrl: "https://finance-budget-tracker.vercel.app/",
+    gitUrl: "https://github.com/JoshCodeAligator/Capstone-App", 
+    previewUrl: "/", 
   },
+  
   {
     id: 4,
-    title: "Wordle Game",
-    description: "Designed and built an interactive mock wordle game using HTML, CSS, and Javascript.",
-    image: "/images/projects/wordle-pic.png",
-    tag: ["All", "Full Stack"],
-    gitUrl: "https://github.com/JoshCodeAligator/joshua-debele-world",
-    previewUrl: "https://joshua-debele-world.vercel.app/",
+    title: "Pensieve-PPO",
+    description: "Adapted a reinforcement learning model to boost video streaming quality over satellite and terrestrial networks.",
+    image: "/images/projects/pensieve-ppo.png", 
+    tag: ["All", "Machine Learning"],
+    gitUrl: "https://github.com/JoshCodeAligator/Pensieve-PPO",
+    previewUrl: "/",
   },
+  
   {
     id: 5,
+    title: "JusticeBot",
+    description: "AI chatbot that explains legal information in plain language using NLP and Python.",
+    image: "/images/projects/justicebot.jpg", 
+    tag: ["All", "Machine Learning"],
+    gitUrl: "https://github.com/JoshCodeAligator/Hackathon2024-JusticeBot", 
+    previewUrl: "/",
+  },
+  {
+    id: 6,
     title: "TIES Resume Builder",
     description: "Crafted a user-centric Resume Builder using frontend development technologies HTML, CSS, and Javascript with a focus on delivering an intuitive user experience.",
     image: "/images/projects/ties-resume-builder.png",
@@ -50,34 +61,25 @@ const projectsData = [
     gitUrl: "https://github.com/JoshCodeAligator/TIES-Resume-Builder",
     previewUrl: "https://ties-resume-builder.vercel.app/index.html",
     
-
-  },{
-    id: 6,
+  },
+  {
+    id: 7,
     title: "Ticketing App",
-    description: "Created a ticketing app where users can report a software or hardware problem they are experiencing. Used NextJS and Tailwind CSS for frontend, and MongoDB Atlas for the backend.",
+    description: "Created a ticketing app that allows users can report a software or hardware problem they are experiencing. Built with NextJS, Tailwind CSS, and MongoDB Atlas.",
     image: "/images/projects/ticket-app.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/JoshCodeAligator/josh-ticket-app",
     previewUrl: "/",
   },
   {
-    id: 7,
-    title: "Obituary Project",
-    description: "I created a project that lets users create an obituary card for any dead (or alive) person. I've implemented AWS Step Functions and DynamoDB for data storage and retrieval, Cloudinary for Images, and the OpenAI API for dynamic text generation. React and CSS were used for the frontend and Python for the backend.",
-    image: "/images/projects/obituary.png",
-    tag: ["All", "Full Stack"],
-    gitUrl: "https://github.com/JoshCodeAligator/Obituary-Project",
-    previewUrl: "/",
-  }, {
     id: 8,
-    title: "Football Match Predictor",
-    description: "Created a football match predictor that can predict which team will win upcoming football matches. The machine learning models used were Random Forest Classification and Logistic Regression. The application was programmed using Python inside JupyterLab.",
-    image: "/images/projects/football-match-predictor.png",
-    tag: ["All", "Machine Learning"],
-    gitUrl: "https://github.com/JoshCodeAligator/Predict-Matches",
-    previewUrl: "/",
+    title: "Wordle Game",
+    description: "Designed and built an interactive mock wordle game using HTML, CSS, and Javascript.",
+    image: "/images/projects/wordle-pic.png",
+    tag: ["All", "Full Stack"],
+    gitUrl: "https://github.com/JoshCodeAligator/joshua-debele-world",
+    previewUrl: "https://joshua-debele-world.vercel.app/",
   },
-  
 ];
 
 const ProjectSection = () => {
