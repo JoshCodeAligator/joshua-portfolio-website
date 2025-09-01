@@ -8,11 +8,11 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const handleDownloadCV = () => {
-    const resumeUrl = 'Joshua_Debele.pdf';
+    const resumeUrl = 'Joshua_Debele_SWE.pdf';
     
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'Joshua_Debele_Resume.pdf';
+    link.download = 'Joshua_Debele_SWE_Resume.pdf';
     link.click();
   };
 
