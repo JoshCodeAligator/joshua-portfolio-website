@@ -16,13 +16,13 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "NextJS Portfolio Website",
-    description: "Personal portfolio website built with NextJS and Tailwind CSS, featuring projects, skills, and contact integration. Includes an email system powered by Resend API.",
-    image: "/images/projects/joshua-portfolio-website.png",
+    title: "Pet Adoption App",
+    description: "Developed a responsive full-stack web application that connects users with adoptable pets. Built with React for the frontend, Node.js/Express for the backend, and MongoDB for data persistence. Features include search, filtering, and adoption request forms.",
+    image: "/images/projects/pet-adoption.png",
     tag: ["All", "Full Stack"],
-    gitUrl: "https://github.com/JoshCodeAligator/joshua-portfolio-website",
-    previewUrl: "https://joshua-portfolio-website-nine.vercel.app/",
-  },
+    gitUrl: "https://github.com/JoshCodeAligator/pet-adoption-401",
+    previewUrl: "/",
+  },  
   {
     id: 3,
     title: "Capstone Mobile App",
@@ -32,7 +32,6 @@ const projectsData = [
     gitUrl: "https://github.com/JoshCodeAligator/Capstone-App", 
     previewUrl: "/", 
   },
-  
   {
     id: 4,
     title: "Pensieve-PPO",
