@@ -12,7 +12,7 @@ const projectsData = [
     image: "/images/projects/joshua-portfolio-website.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/JoshCodeAligator/joshua-portfolio-website",
-    previewUrl: "https://joshua-portfolio-website-nine.vercel.app/",
+    previewUrl: "https://joshua-portfolio-website-nu.vercel.app/",
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ const projectsData = [
     image: "/images/projects/ties-resume-builder.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/JoshCodeAligator/TIES-Resume-Builder",
-    previewUrl: "https://ties-resume-builder.vercel.app/index.html",
+    previewUrl: "https://joshua-portfolio-website-nu.vercel.app/",
     
   },
   {
