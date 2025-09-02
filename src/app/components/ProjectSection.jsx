@@ -58,7 +58,7 @@ const projectsData = [
     image: "/images/projects/ties-resume-builder.png",
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/JoshCodeAligator/TIES-Resume-Builder",
-    previewUrl: "https://joshua-portfolio-website-nu.vercel.app/",
+    previewUrl: "https://ties-resume-builder.vercel.app/",
     
   },
   {
