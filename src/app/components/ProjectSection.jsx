@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "Capstone Mobile App",
-    description: "React Native app built with a team to connect students through shared updates, backed by APIs and PostgreSQL.",
+    description: "Built a Flutter mobile app with an ESP32 wearable for wound monitoring, using OpenCV for image analysis and Firebase for real-time data storage. Enabled patients and caregivers to track healing progress and receive timely care recommendations.",
     image: "/images/projects/capstone.png", 
     tag: ["All", "Full Stack"],
     gitUrl: "https://github.com/JoshCodeAligator/Capstone-App", 
